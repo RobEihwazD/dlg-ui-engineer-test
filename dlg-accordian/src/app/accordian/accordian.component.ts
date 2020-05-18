@@ -12,7 +12,7 @@ export class AccordianComponent implements OnInit {
 
   @Input() title = 'Have a question? We can help';
   questions: Observable<QuestionAndAnswer[]>;
-  constructor(private service : AccordianDataService) { }
+  constructor(private service : AccordianDataService, ) { }
 
   ngOnInit(): void {
     this.questions = this.service.getFaqs();

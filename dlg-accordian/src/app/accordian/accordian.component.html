@@ -1,9 +1,10 @@
 <section class="container-fluid">
     <header>
-      <h1>{{title}}</h1>
+      <h1>{{title|uppercase}}</h1>
     </header>
     <div class="col">
-      <app-accordian-panel *ngFor="let question of questions | async" [question]="question"></app-accordian-panel>
+      <app-accordian-panel *ngFor="let question of questions | async; let i = index" 
+        [question]="question" [showAnswer]="i===0"></app-accordian-panel>
     </div>
   </section>
   
