@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, HostBinding } from '@angular/core';
+import { QuestionAndAnswer } from '../service/question-and-answer';
 
 @Component({
   selector: 'app-accordian-panel',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccordianPanelComponent implements OnInit {
 
+  @Input() question: QuestionAndAnswer;
+  @Input() showAnswer = false;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+  onClick() {
   }
 
 }

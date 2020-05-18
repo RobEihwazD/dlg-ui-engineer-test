@@ -1,1 +1,9 @@
-<p>accordian works!</p>
+<section class="container-fluid">
+    <header>
+      <h1>{{title}}</h1>
+    </header>
+    <div class="col">
+      <app-accordian-panel *ngFor="let question of questions | async" [question]="question"></app-accordian-panel>
+    </div>
+  </section>
+  

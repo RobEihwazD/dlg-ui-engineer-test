@@ -10,14 +10,16 @@ import { AccordianDataService } from './service/accordian-data.service';
   declarations: [
     AccordianComponent,
     AccordianPanelComponent,
-    HttpClientModule
+    
   ],
   imports: [
     CommonModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers:[
     AccordianDataService
-  ]
+  ],
+  exports:[AccordianComponent]
 })
 export class DlgAccordianModule { }

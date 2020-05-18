@@ -54,10 +54,6 @@ describe('AccordianDataService', () => {
 
   it('should fetch Q&A`s as an Observable', async(inject([HttpTestingController, AccordianDataService],
     (httpClient: HttpTestingController, accordianService: AccordianDataService) => {
-
-
-
-
       accordianService.getFaqs()
         .subscribe((data: any) => {
           expect(data.length).toBe(5);

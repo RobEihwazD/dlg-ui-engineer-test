@@ -1,1 +1,12 @@
-<p>accordian-panel works!</p>
+<section>
+    <header class="row">
+      <div class="col-2"><h3>{{question?.id}}</h3></div>
+      <div class="col-8"><p>{{question?.question}}</p></div>
+      <div class="col-2">
+        <button class="button-icon" (click)="onClick()"></button>
+      </div>
+    </header>
+    <article>
+      <p> {{question?.answer}}</p>
+    </article>
+  </section>

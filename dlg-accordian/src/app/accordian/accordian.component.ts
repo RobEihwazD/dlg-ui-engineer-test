@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Observable } from 'rxjs';
+import { QuestionAndAnswer } from './service/question-and-answer';
+import { AccordianDataService } from './service/accordian-data.service';
 
 @Component({
   selector: 'app-accordian',
@@ -7,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccordianComponent implements OnInit {
 
-  constructor() { }
+  @Input() title = 'Have a question? We can help';
+  questions: Observable<QuestionAndAnswer[]>;
+  constructor(private service : AccordianDataService) { }
 
   ngOnInit(): void {
+    this.questions = this.service.getFaqs();
   }
 
 }
