@@ -4,7 +4,7 @@
     </header>
     <div class="col">
       <app-accordian-panel *ngFor="let question of questions | async; let i = index" 
-        [question]="question" [showAnswer]="i===0"></app-accordian-panel>
+        [question]="question" [showAnswer]="i===0" (clicked)="questionClickedHandler($event)"></app-accordian-panel>
     </div>
   </section>
   

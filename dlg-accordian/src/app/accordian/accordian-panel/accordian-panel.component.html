@@ -1,14 +1,17 @@
 <section class="container">
-  <header class="row  h-100 align-items-center" [ngClass]="showAnswer?'answerShowing':'answerHidden'">
+  <header
+    class="row h-100 align-items-center"
+    [ngClass]="showAnswer ? 'answerShowing' : 'answerHidden'"
+  >
     <div class="col-1">
-      <h3>Q{{question?.id}}</h3>
+      <h3>Q{{ question?.id }}</h3>
     </div>
     <div class="col-9 my-auto">
-      <p>{{question?.question}}</p>
+      <p>{{ question?.question }}</p>
     </div>
     <div class="col-2 al">
-      <button class="button-icon float-right"  (click)="onClick()">
-        <div [@rotate]="showAnswer? 'open' : 'closed'">
+      <button class="button-icon float-right" (click)="onClick()">
+        <div [@rotate]="showAnswer ? 'open' : 'closed'">
           <svg-icon name="plus-icon"></svg-icon>
         </div>
       </button>
@@ -16,11 +19,8 @@
   </header>
   <article class="container">
     <div class="row" *ngIf="showAnswer" [@slideInOut]>
-      <p> {{question?.answer}}</p>
+      <p>{{ question?.answer }}</p>
     </div>
-
   </article>
-  <footer class="row v-100">
-
-  </footer>
+  <footer class="row v-100"></footer>
 </section>

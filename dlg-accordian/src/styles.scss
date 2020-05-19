@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+
+@mixin font($font-family, $font-file) {
+    @font-face {
+      font-family: $font-family;
+      src:url($font-file) format('truetype');     
+      
+    }
+  }
+
+@include font('oswald-bold','./assets/fonts/oswald-bold.ttf' );
+@include font('oswald-light','./assets/fonts/oswald-light.ttf' );
+@include font('oswald-regular','./assets/fonts/oswald-regular.ttf' );
+
+
+
+body{
+  background-color: #fffdd8;
+  overflow: hidden;
+}
