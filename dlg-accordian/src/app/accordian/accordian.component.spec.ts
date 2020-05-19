@@ -4,7 +4,12 @@ import { AccordianComponent } from './accordian.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { AppComponent } from '../app.component';
+import { MockComponent } from 'ng-mocks';
+import { AccordianPanelComponent } from './accordian-panel/accordian-panel.component';
 import { of } from 'rxjs';
+import { By } from '@angular/platform-browser';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+
 
 describe('AccordianComponent', () => {
   let component: AccordianComponent;
@@ -39,8 +44,8 @@ describe('AccordianComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AppComponent, AccordianComponent ],
-      imports: [HttpClientTestingModule],
+      declarations: [AppComponent, AccordianComponent, MockComponent(AccordianPanelComponent)],
+      imports: [HttpClientTestingModule, NoopAnimationsModule],
       schemas: [CUSTOM_ELEMENTS_SCHEMA]
     }).compileComponents();
   }));
@@ -56,5 +61,13 @@ describe('AccordianComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should display a list of 5 question panels', )
+  it('should contain a list of 5 questions', async () => {
+    component.questions = of(faqs)
+    let  length 
+    component.questions.subscribe( result =>{
+      length =  result.length;
+    })
+
+    expect(length).toEqual(5);
+  })
 });

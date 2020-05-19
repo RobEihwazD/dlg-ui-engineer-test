@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AccordianPanelComponent } from './accordian-panel.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { AngularSvgIconModule } from 'angular-svg-icon';
 
 describe('AccordianPanelComponent', () => {
   let component: AccordianPanelComponent;
@@ -13,7 +16,9 @@ describe('AccordianPanelComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [AccordianPanelComponent]
+      declarations: [AccordianPanelComponent],
+      imports: [NoopAnimationsModule],
+      schemas:[CUSTOM_ELEMENTS_SCHEMA]
     })
       .compileComponents();
   }));
@@ -29,16 +34,12 @@ describe('AccordianPanelComponent', () => {
   });
 
   it('should except a question', () => {
-    this.component.question = question;
+    component.question = question;
     expect(component.question.id).toEqual('1');
   })
 
   it(' should set showAnswer to true ', () => {
-    this.component.showAnswer = true;
+    component.showAnswer = true;
     expect(component.showAnswer).toEqual(true);
   })
-
-  // test ui 
-
-  it(' should set show answer to true ')
 });
