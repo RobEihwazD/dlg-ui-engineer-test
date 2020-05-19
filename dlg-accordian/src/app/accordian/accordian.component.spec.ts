@@ -55,4 +55,6 @@ describe('AccordianComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should display a list of 5 question panels', )
 });

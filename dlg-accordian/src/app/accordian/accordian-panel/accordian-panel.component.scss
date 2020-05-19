@@ -1,8 +1,18 @@
 :host {
   $color-gray: grey; // create _variables.scss
+  .jumbotron {
+    background-color: transparent !important;
+  }
 
+  .answerShowing {
+    background-color: grey !important;
+  }
+
+  .answerHidden {
+    background-color: transparent;
+  }
+ 
   header {
-    //background-color: #808080;
     padding: 1rem;
 
     h3 {
@@ -26,11 +36,18 @@
     }
 
     .answerShowing {
-      background-color: $color-gray;
+      background-color: grey !important;
     }
-
+  
     .answerHidden {
       background-color: transparent;
+    }
+  
+
+    @media only screen and (max-width: 576px) {
+      p {
+        margin-left: 1rem;
+      }
     }
   }
 
@@ -41,6 +58,8 @@
   article {
     padding: 1rem;
     overflow: hidden;
+    position: relative;
+    z-index: -1
   }
 
   section {

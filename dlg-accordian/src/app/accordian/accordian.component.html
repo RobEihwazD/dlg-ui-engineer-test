@@ -1,8 +1,8 @@
-<section class="container-fluid">
+<section class="container-fluid pl-0 pr-0">
     <header>
       <h1>{{title|uppercase}}</h1>
     </header>
-    <div class="col">
+    <div class="col pl-0 pr-0">
       <app-accordian-panel *ngFor="let question of questions | async; let i = index" 
         [question]="question" [showAnswer]="i===0" (clicked)="questionClickedHandler($event)"></app-accordian-panel>
     </div>

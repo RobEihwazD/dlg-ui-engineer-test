@@ -19,4 +19,7 @@
 body{
   background-color: #fffdd8;
   overflow: hidden;
+  @media only screen and (max-width: 576px) {
+    overflow: scroll;
+  }
 }
