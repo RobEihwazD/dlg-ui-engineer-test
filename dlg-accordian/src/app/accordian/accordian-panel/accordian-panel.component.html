@@ -1,7 +1,7 @@
 <section class="container mt-1 mb-1 pb-2">
 
-  <header class=" d-flex h-100 pl-md-0 align-items-center m-md-n2 pl-md-0 " [ngClass]="showAnswer?'answerShowing':'answerHidden'">
-    <div class="col-1 ">
+  <header class=" d-flex align-items-center  h-100  " [ngClass]="showAnswer?'answerShowing':'answerHidden'">
+    <div class="col-1 pl-md-2 ">
       <h3>Q{{question?.id}}</h3>
     </div>
 
@@ -18,7 +18,7 @@
   </header>
 
   <article class="container">
-    <div class="row" *ngIf="showAnswer" [@slideInOut]>
+    <div class="row mr-0 ml-0" *ngIf="showAnswer" [@slideInOut]>
       <p> {{question?.answer}}</p>
     </div>
   </article>

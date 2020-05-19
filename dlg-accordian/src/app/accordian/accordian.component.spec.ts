@@ -62,10 +62,10 @@ describe('AccordianComponent', () => {
   });
 
   it('should contain a list of 5 questions', async () => {
-    component.questions = of(faqs)
-    let  length 
-    component.questions.subscribe( result =>{
-      length =  result.length;
+    component.questions = of(faqs);
+    let length;
+    component.questions.subscribe(result => {
+      length = result.length;
     })
 
     expect(length).toEqual(5);

@@ -11,7 +11,7 @@
   .answerHidden {
     background-color: transparent;
   }
- 
+
   header {
     padding: 1rem;
 
@@ -35,13 +35,6 @@
       align-content: center;
     }
 
-    .answerShowing {
-      background-color: grey !important;
-    }
-  
-    .answerHidden {
-      background-color: transparent;
-    }
   
 
     @media only screen and (max-width: 576px) {
@@ -59,7 +52,7 @@
     padding: 1rem;
     overflow: hidden;
     position: relative;
-    z-index: -1
+    z-index: -1;
   }
 
   section {

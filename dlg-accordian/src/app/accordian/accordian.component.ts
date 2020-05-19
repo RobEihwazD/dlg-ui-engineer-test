@@ -20,11 +20,11 @@ export class AccordianComponent implements OnInit {
     this.questions = this.service.getFaqs();
   }
 
-  questionClickedHandler(question){
-    this.panels.forEach( p =>{
-      if( p.question.id !== question.id){
+  questionClickedHandler(question) {
+    this.panels.forEach(p => {
+      if (p.question.id !== question.id) {
         p.showAnswer = false;
-      } else if(p.question.id === question.id ){
+      } else if (p.question.id === question.id) {
         p.showAnswer = !p.showAnswer;
       }
     })

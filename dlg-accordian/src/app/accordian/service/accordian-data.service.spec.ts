@@ -41,7 +41,7 @@ describe('AccordianDataService', () => {
       ],
       providers: [
         AccordianDataService
-        
+
       ]
     });
     service = TestBed.inject(AccordianDataService);
@@ -59,8 +59,8 @@ describe('AccordianDataService', () => {
           expect(data.length).toBe(5);
         });
 
-      let req = httpClient.expectOne({ method: 'GET', url:accordianService.DATA_URL});
-      expect(req.request.method).toBe("GET");
+      const req = httpClient.expectOne({ method: 'GET', url: accordianService.DATA_URL });
+      expect(req.request.method).toBe('GET');
 
       req.flush(faqs);
       httpClient.verify();
